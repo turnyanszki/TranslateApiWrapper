@@ -1,6 +1,6 @@
 ﻿namespace TranslateApiWrapper.Abstractions
 {
-    public enum TranslateProviders
+    public enum TranslateProvider
     {
         Google = 1,
     }

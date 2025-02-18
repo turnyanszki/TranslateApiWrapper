@@ -13,9 +13,15 @@ namespace TranslateApiWrapper.Core
             _serviceProvider = serviceProvider;
         }
 
-        public Task<TranslationResult> TranslateAsync(string text, Language sourceLanguage, Language destinationLanguage, TranslateProviders translateProviders = TranslateProviders.Google, CancellationToken cancellationToken = default)
+        public Task<TranslationResult> TranslateAsync(string text, Language sourceLanguage, Language destinationLanguage, TranslateProvider translateProvider = TranslateProvider.Google, CancellationToken cancellationToken = default)
         {
-            var translateClient = _serviceProvider.GetRequiredKeyedService<ITranslateClient>(translateProviders.ToString());
+            ITranslateClient translateClient;
+
+            if (Enum.IsDefined(translateProvider))
+                translateClient = _serviceProvider.GetRequiredKeyedService<ITranslateClient>(translateProvider);
+            else
+                translateClient = _serviceProvider.GetRequiredKeyedService<ITranslateClient>((int)translateProvider);
+
             return translateClient.TranslateAsync(text, sourceLanguage, destinationLanguage, cancellationToken);
         }
     }

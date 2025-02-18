@@ -25,7 +25,7 @@ namespace TranslateApiWrapper.DI
 
             services.AddSingleton(googleTranslateApiSettings);
             services.AddHttpClient();
-            services.AddKeyedScoped<ITranslateClient, GoogleTranslateClient>(TranslateProviders.Google.ToString());
+            services.AddKeyedScoped<ITranslateClient, GoogleTranslateClient>(TranslateProvider.Google);
 
             return services;
         }

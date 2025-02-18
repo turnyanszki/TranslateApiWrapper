@@ -17,7 +17,7 @@ namespace TranslateApiWrapper.Tests
             _serviceProvider = Substitute.For<IKeyedServiceProvider>();
             _translateClient = Substitute.For<ITranslateClient>();
 
-            _serviceProvider.GetRequiredKeyedService(typeof(ITranslateClient), Arg.Any<string>())
+            _serviceProvider.GetRequiredKeyedService(typeof(ITranslateClient), Arg.Any<object>())
                 .Returns((object)_translateClient);
 
             _translator = new Translator(_serviceProvider);
@@ -59,7 +59,7 @@ namespace TranslateApiWrapper.Tests
             var sourceLanguage = Language.English;
             var destinationLanguage = Language.German;
 
-            _serviceProvider.GetRequiredKeyedService(typeof(ITranslateClient), Arg.Any<string>())
+            _serviceProvider.GetRequiredKeyedService(typeof(ITranslateClient), Arg.Any<object>())
                 .Returns(x => { throw new InvalidOperationException("No service for type 'ITranslateClient'"); });
 
             // Act & Assert

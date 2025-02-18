@@ -38,7 +38,7 @@ namespace GoogleTranslateWrapper.ConsoleApp
             using (var provider = services.BuildServiceProvider())
             {
                 var translator = provider.GetRequiredService<ITranslator>();
-                var result = await translator.TranslateAsync("Example translatable text. Do you know any translatable text?", Language.English, Language.German, TranslateProviders.Google);
+                var result = await translator.TranslateAsync("Example translatable text. Do you know any translatable text?", Language.English, Language.German, TranslateProvider.Google);
                 Console.WriteLine(result.TranslatedText);
             }
 
@@ -49,5 +49,6 @@ namespace GoogleTranslateWrapper.ConsoleApp
 
 ### Extending TranslateApiWrapper
 TranslateApiWrapper is designed to be extensible. You can add support for new translation services by implementing the `ITranslateClient` interface and registering it with the appropriate key.
+Example: @TranslateApiWrapper.ConsoleApp/CustomTranslateClient
 
 
