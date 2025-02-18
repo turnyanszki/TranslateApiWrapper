@@ -9,9 +9,13 @@ namespace GoogleTranslateWrapper.ConsoleApp
         static async Task Main(string[] args)
         {
             var services = new ServiceCollection();
-            services.AddGoogleTranslateWrapper(null);
-            using (var provider = services.BuildServiceProvider())
+            services.AddTranslateApiWrapper()
+                    .AddGoogleTranslateClient(configure =>
+                    {
+                        configure.Timeout = 2000;
+                    });
 
+            using (var provider = services.BuildServiceProvider())
             {
                 var translator = provider.GetRequiredService<ITranslator>();
                 var result = await translator.TranslateAsync("Example translatable text. Do you know any translatable text?", Language.English, Language.German, TranslateProviders.Google);
