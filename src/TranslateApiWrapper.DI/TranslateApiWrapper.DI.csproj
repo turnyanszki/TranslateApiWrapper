@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TranslateApiWrapper.Core\TranslateApiWrapper.Core.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\TranslateApiWrapper.Core\TranslateApiWrapper.Core.csproj" />
+    </ItemGroup>
 
 </Project>

@@ -1,12 +1,31 @@
-on: workflow_dispatch
+name: Publish nuget
+on:
+  workflow_dispatch:
 jobs:
-  build:
+  Build & Test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - name: Extract version from version.json
+      run: |
+        echo "VERSION=$(./.github/scripts/extract_version.sh)" >> "$GITHUB_ENV"
+
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release /p:Version=${{ env.VERSION }}
+
     - name: Test
-      run: dotnet test --configuration Release --no-build
+      run: dotnet test --configuration Release --no-build /p:Version=${{ env.VERSION }}
+
+  Pack & Publish:
+    needs: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Pack NuGet package
+      run: dotnet pack --configuration Release --output nupkgs /p:Version=${{ env.VERSION }}
+    - name: Push to NuGet
+      run: dotnet nuget push "nupkgs/*.nupkg" --source "https://api.nuget.org/v3/index.json" --api-key "${{ secrets.NUGET_API_KEY }}"
