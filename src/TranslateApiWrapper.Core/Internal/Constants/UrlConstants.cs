@@ -1,4 +1,4 @@
-﻿namespace GoogleTranslateWrapper.Core.Internal.Constants
+﻿namespace TranslateApiWrapper.Core.Internal.Constants
 {
     internal class UrlConstants
     {

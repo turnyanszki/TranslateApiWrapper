@@ -1,6 +1,6 @@
-﻿using GoogleTranslateWrapper.Core.Internal.Constants;
+﻿using TranslateApiWrapper.Core.Internal.Constants;
 
-namespace GoogleTranslateWrapper.Core.Internal.Providers.Google
+namespace TranslateApiWrapper.Core.Internal.Providers.Google
 {
     public class GoogleTranslateApiSettings
     {

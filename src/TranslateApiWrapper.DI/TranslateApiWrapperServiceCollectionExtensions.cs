@@ -1,11 +1,10 @@
-﻿using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.Core;
-using GoogleTranslateWrapper.Core.Internal.Providers;
-using GoogleTranslateWrapper.Core.Internal.Providers.Google;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.Core;
+using TranslateApiWrapper.Core.Internal.Providers;
+using TranslateApiWrapper.Core.Internal.Providers.Google;
 
-namespace GoogleTranslateWrapper.DI
+namespace TranslateApiWrapper.DI
 {
     public static class TranslateApiWrapperServiceCollectionExtensions
     {

@@ -1,4 +1,4 @@
-# TranslateApiWrapper# TranslateApiWrapper
+# TranslateApiWrapper&nbsp;[![Build status](https://github.com/turnyanszki/TranslateApiWrapper/actions/workflows/build_test.yml/badge.svg?branch=master)](https://github.com/turnyanszki/TranslateApiWrapper/actions)&nbsp;[![NuGet Version](https://img.shields.io/nuget/v/TranslateApiWrapper.DI.svg?style=flat)](https://www.nuget.org/packages/TranslateApiWrapper.DI/)
 
 ## Overview
 TranslateApiWrapper is a .NET 8 library designed to provide a simple and efficient way to interact with various translation APIs. It abstracts the complexities of different translation services, offering a unified interface for developers to easily integrate translation capabilities into their applications.

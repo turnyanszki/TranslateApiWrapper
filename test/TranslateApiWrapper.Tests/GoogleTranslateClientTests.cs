@@ -1,7 +1,6 @@
-﻿using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.Core.Internal.Providers.Google;
-using NSubstitute;
-using System.Net;
+﻿using System.Net;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.Core.Internal.Providers.Google;
 
 namespace TranslateApiWrapper.Tests
 {

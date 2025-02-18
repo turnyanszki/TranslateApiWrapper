@@ -1,8 +1,8 @@
-﻿using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.Core.Internal.Providers;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.Core.Internal.Providers;
 
-namespace GoogleTranslateWrapper.Core
+namespace TranslateApiWrapper.Core
 {
     public class Translator : ITranslator
     {

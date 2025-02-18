@@ -1,10 +1,9 @@
-﻿using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.Core.Internal.Constants;
-using GoogleTranslateWrapper.Core.Internal.Utils;
-using System.Net.Http.Headers;
-using System.Text.Json;
+﻿using System.Text.Json;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.Core.Internal.Constants;
+using TranslateApiWrapper.Core.Internal.Utils;
 
-namespace GoogleTranslateWrapper.Core.Internal.Providers.Google
+namespace TranslateApiWrapper.Core.Internal.Providers.Google
 {
     public class GoogleTranslateClient : ITranslateClient
     {

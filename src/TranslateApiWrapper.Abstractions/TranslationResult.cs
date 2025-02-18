@@ -1,4 +1,4 @@
-﻿namespace GoogleTranslateWrapper.Abstractions
+﻿namespace TranslateApiWrapper.Abstractions
 {
     public class TranslationResult
     {

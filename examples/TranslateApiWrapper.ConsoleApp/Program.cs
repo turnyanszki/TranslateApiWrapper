@@ -1,6 +1,6 @@
-﻿using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.DI;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.DI;
 
 namespace GoogleTranslateWrapper.ConsoleApp
 {

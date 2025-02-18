@@ -1,11 +1,8 @@
-using GoogleTranslateWrapper.Abstractions;
-using GoogleTranslateWrapper.Core;
-using NSubstitute;
-using Xunit;
-using System;
-using System.Threading.Tasks;
-using GoogleTranslateWrapper.Core.Internal.Providers;
 using Microsoft.Extensions.DependencyInjection;
+using NSubstitute;
+using TranslateApiWrapper.Abstractions;
+using TranslateApiWrapper.Core;
+using TranslateApiWrapper.Core.Internal.Providers;
 
 namespace TranslateApiWrapper.Tests
 {

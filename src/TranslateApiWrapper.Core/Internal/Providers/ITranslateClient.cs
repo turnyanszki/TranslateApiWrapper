@@ -1,6 +1,6 @@
-﻿using GoogleTranslateWrapper.Abstractions;
+﻿using TranslateApiWrapper.Abstractions;
 
-namespace GoogleTranslateWrapper.Core.Internal.Providers
+namespace TranslateApiWrapper.Core.Internal.Providers
 {
     public interface ITranslateClient
     {

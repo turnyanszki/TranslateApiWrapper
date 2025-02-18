@@ -1,4 +1,4 @@
-﻿namespace GoogleTranslateWrapper.Core.Internal.Providers
+﻿namespace TranslateApiWrapper.Core.Internal.Providers
 {
     public class ApiException : Exception
     {
@@ -8,7 +8,7 @@
             ExternalApi = externalApi;
         }
 
-        public ApiException(string externalApi, string? message, Exception? innerException) : base(message, innerException)
+        public ApiException(string externalApi, string message, Exception innerException) : base(message, innerException)
         {
             ExternalApi = externalApi;
         }

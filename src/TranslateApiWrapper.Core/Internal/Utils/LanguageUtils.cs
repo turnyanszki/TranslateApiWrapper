@@ -1,6 +1,6 @@
-﻿using GoogleTranslateWrapper.Abstractions;
+﻿using TranslateApiWrapper.Abstractions;
 
-namespace GoogleTranslateWrapper.Core.Internal.Utils
+namespace TranslateApiWrapper.Core.Internal.Utils
 {
     internal static class LanguageUtils
     {
