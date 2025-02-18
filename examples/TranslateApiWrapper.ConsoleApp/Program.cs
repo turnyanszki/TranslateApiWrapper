@@ -14,7 +14,6 @@ namespace GoogleTranslateWrapper.ConsoleApp
 
             {
                 var translator = provider.GetRequiredService<ITranslator>();
-
                 var result = await translator.TranslateAsync("Example translatable text. Do you know any translatable text?", Language.English, Language.German, TranslateProviders.Google);
                 Console.WriteLine(result.TranslatedText);
             }

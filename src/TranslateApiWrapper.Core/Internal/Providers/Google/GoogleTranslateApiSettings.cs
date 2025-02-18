@@ -17,7 +17,7 @@ namespace GoogleTranslateWrapper.Core.Internal.Providers.Google
         /// <summary>
         /// query time out (ms)
         /// </summary>
-        public int NetworkQueryTimeout { get; set; } = 2000;
+        public int Timeout { get; set; } = 2000;
 
         /// <summary>
         /// user agent

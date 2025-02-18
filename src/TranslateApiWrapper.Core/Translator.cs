@@ -13,10 +13,10 @@ namespace GoogleTranslateWrapper.Core
             _serviceProvider = serviceProvider;
         }
 
-        public Task<TranslationResult> TranslateAsync(string text, Language sourceLanguage, Language destinationLanguage, TranslateProviders translateProviders = TranslateProviders.Google)
+        public Task<TranslationResult> TranslateAsync(string text, Language sourceLanguage, Language destinationLanguage, TranslateProviders translateProviders = TranslateProviders.Google, CancellationToken cancellationToken = default)
         {
             var translateClient = _serviceProvider.GetRequiredKeyedService<ITranslateClient>(translateProviders.ToString());
-            return translateClient.TranslateAsync(text, sourceLanguage, destinationLanguage);
+            return translateClient.TranslateAsync(text, sourceLanguage, destinationLanguage, cancellationToken);
         }
     }
 }
