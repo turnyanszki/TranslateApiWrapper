@@ -2,12 +2,13 @@ name: Publish nuget
 on:
   workflow_dispatch:
 jobs:
-  Build & Test:
+  build_test:
+    name: Build & Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Extract version from version.json
       run: |
@@ -19,12 +20,13 @@ jobs:
     - name: Test
       run: dotnet test --configuration Release --no-build /p:Version=${{ env.VERSION }}
 
-  Pack & Publish:
-    needs: Build & Test
+  pack_publish:
+    name: Pack & Publish
+    needs: build_test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Pack NuGet package
       run: dotnet pack --configuration Release --output nupkgs /p:Version=${{ env.VERSION }}
     - name: Push to NuGet
