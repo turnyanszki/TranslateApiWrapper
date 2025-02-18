@@ -12,7 +12,7 @@ TranslateApiWrapper is a .NET 8 library designed to provide a simple and efficie
 
 ## Installation
 To install TranslateApiWrapper, you can use the NuGet Package Manager:
-- dotnet add package TranslateApiWrapper.DI## Usage
+- dotnet add package TranslateApiWrapper.DI
 
 ## Usage
 Here is a basic example of how to use TranslateApiWrapper in your .NET application:
@@ -49,6 +49,6 @@ namespace GoogleTranslateWrapper.ConsoleApp
 
 ### Extending TranslateApiWrapper
 TranslateApiWrapper is designed to be extensible. You can add support for new translation services by implementing the `ITranslateClient` interface and registering it with the appropriate key.
-Example: @TranslateApiWrapper.ConsoleApp/CustomTranslateClient
+ - Example: @TranslateApiWrapper.ConsoleApp/CustomTranslateClient
 
 
