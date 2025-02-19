@@ -10,7 +10,7 @@ namespace TranslateApiWrapper.DI
     {
         public static IServiceCollection AddTranslateApiWrapper(this IServiceCollection services)
         {
-            services.AddSingleton<ITranslator, Translator>();
+            services.AddScoped<ITranslator, Translator>();
 
             return services;
         }
